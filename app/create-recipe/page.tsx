@@ -10,7 +10,7 @@ function CreateRecipe() {
     ingredients: [],
   });
 
-  const handleForm = (e: FormEvent<HTMLInputElement>): void => {
+  const handleChange = (e: FormEvent<HTMLInputElement>): void => {
     const { id, value } = e.currentTarget;
     setFormData((prevState) => ({
       ...prevState,
@@ -18,13 +18,13 @@ function CreateRecipe() {
     }));
   };
 
-  const handleRecipe = (): void => {};
+  const handleSubmit = (): void => {};
 
   return (
     <Form
-      handleForm={handleForm}
+      handleChange={handleChange}
       formData={formData}
-      handleRecipe={handleRecipe}
+      handleSubmit={handleSubmit}
       type="Create"
     />
   );

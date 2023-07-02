@@ -1,4 +1,4 @@
-import Nav from '../../components/layout/Nav';
+import Nav from '../../../components/layout/Nav';
 import { render, screen } from '@testing-library/react';
 
 describe('Nav', () => {
