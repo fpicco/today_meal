@@ -7,37 +7,41 @@ type Props = {
   type: string;
 };
 
-function Form({ handleSubmit, formData, handleChange, type }: Props) {
+function Form({
+  handleSubmit, formData, handleChange, type,
+}: Props) {
   return (
-    <form aria-label='form' onSubmit={(e) => handleSubmit(e, formData)}>
+    <form aria-label="form" onSubmit={(e) => handleSubmit(e, formData)}>
       <div>
-        <label htmlFor='title'>
+        <label htmlFor="title">
           Title
           <input
             onChange={handleChange}
-            type='text'
-            id='title'
-            className='form_input'
+            type="text"
+            id="title"
+            className="form_input"
           />
         </label>
 
-        <label htmlFor='ingredients'>
+        <label htmlFor="ingredients">
           Ingredients
           <input
             onChange={handleChange}
-            type='text'
-            id='ingredients'
-            className='form_input'
+            type="text"
+            id="ingredients"
+            className="form_input"
           />
         </label>
       </div>
-      <div className='flex w-full justify-end'>
+      <div className="flex w-full justify-end">
         <button
-          type='submit'
-          className='black_btn mt-4'
+          type="submit"
+          className="black_btn mt-4"
           disabled={formData.title === '' || formData.ingredients.length === 0}
         >
-          {type} recipe
+          {type}
+          {' '}
+          recipe
         </button>
       </div>
     </form>

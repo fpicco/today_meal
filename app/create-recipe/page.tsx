@@ -5,7 +5,6 @@ import React, { useState, FormEvent } from 'react';
 
 function CreateRecipe() {
   const [formData, setFormData] = useState<IRecipe>({
-    id: 0,
     title: '',
     ingredients: [],
   });
@@ -19,7 +18,6 @@ function CreateRecipe() {
   };
 
   const handleSubmit = (): void => {};
-
   return (
     <Form
       handleChange={handleChange}
